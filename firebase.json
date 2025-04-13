@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": ".",  // means deploy everything inside expo
+    "public": ".",
     "ignore": [
       "firebase.json",
       "**/.*",
@@ -8,7 +8,7 @@
     ],
     "rewrites": [
       {
-        "source": "**",
+        "source": "/",
         "destination": "/letzgo.html"
       }
     ]
