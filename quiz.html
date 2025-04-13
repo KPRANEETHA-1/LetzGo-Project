@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Buddy Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="quiz-container">
+  <h1>Find Your Travel Buddy</h1>
+  <p>Take this quiz to find the perfect travel buddies who match your interests!</p>
+  <form id="quizForm">
+    <div class="question">
+      <p>1. What type of destinations do you prefer?</p>
+      <label><input type="radio" name="q1" value="beach"> Beach</label>
+      <label><input type="radio" name="q1" value="mountains"> Mountains</label>
+      <label><input type="radio" name="q1" value="cities"> Cities</label>
+      <label><input type="radio" name="q1" value="countryside"> Countryside</label>
+    </div>
+    <div class="question">
+      <p>2. What is your favorite travel activity?</p>
+      <label><input type="radio" name="q2" value="sightseeing"> Sightseeing</label>
+      <label><input type="radio" name="q2" value="adventure"> Adventure Sports</label>
+      <label><input type="radio" name="q2" value="relaxing"> Relaxing</label>
+      <label><input type="radio" name="q2" value="culture"> Cultural Experiences</label>
+    </div>
+    <div class="question">
+      <p>3. How do you prefer to travel?</p>
+      <label><input type="radio" name="q3" value="solo"> Solo</label>
+      <label><input type="radio" name="q3" value="group"> In a Group</label>
+      <label><input type="radio" name="q3" value="family"> With Family</label>
+      <label><input type="radio" name="q3" value="partner"> With Partner</label>
+    </div>
+    <div class="question">
+      <p>4. What excites you most about a new destination?</p>
+      <label><input type="radio" name="q4" value="A"> The delicious food scene</label>
+      <label><input type="radio" name="q4" value="B"> The unique cultural experiences</label>
+      <label><input type="radio" name="q4" value="C"> The breathtaking natural landscapes</label>
+      <label><input type="radio" name="q4" value="D"> The historical landmarks and architecture</label>
+    </div>
+    <div class="question">
+      <p>5. What's your travel budget like?</p>
+      <label><input type="radio" name="q5" value="A"> I prioritize affordability and finding good deals.</label>
+      <label><input type="radio" name="q5" value="B"> I'm willing to spend more for a comfortable and memorable experience.</label>
+      <label><input type="radio" name="q5" value="C"> Budget is flexible, depending on the destination and experience.</label>
+      <label><input type="radio" name="q5" value="D"> Luxury travel is what I strive for.</label>
+    </div>
+    <div class="question">
+      <p>6. How important is adventure to you?</p>
+      <label><input type="radio" name="q6" value="A"> I crave adrenaline-pumping activities and challenges.</label>
+      <label><input type="radio" name="q6" value="B"> I enjoy some adventure, but also downtime for relaxation.</label>
+      <label><input type="radio" name="q6" value="C"> I prefer sightseeing and cultural experiences over physical challenges.</label>
+      <label><input type="radio" name="q6" value="D"> Comfort and relaxation are my priorities during travel.</label>
+    </div>
+    <div class="question">
+      <p>7. How often do you travel in a year?</p>
+      <label><input type="radio" name="q7" value="A"> Once.</label>
+      <label><input type="radio" name="q7" value="B"> 2-3 trips.</label>
+      <label><input type="radio" name="q7" value="C"> 4-6 trips.</label>
+      <label><input type="radio" name="q7" value="D"> Almost every month.</label>
+    </div>
+    <div class="question">
+      <p>8. How do you find inspiration for your trips?</p>
+      <label><input type="radio" name="q8" value="A"> Travel blogs, articles.</label>
+      <label><input type="radio" name="q8" value="B"> Social media posts.</label>
+      <label><input type="radio" name="q8" value="C"> Friends and family.</label>
+      <label><input type="radio" name="q8" value="D"> Books and movies.</label>
+    </div>
+    <div class="question">
+      <p>9. How do you prefer to get around while travelling?</p>
+      <label><input type="radio" name="q9" value="A"> Public transportation.</label>
+      <label><input type="radio" name="q9" value="B"> Car/bike rentals.</label>
+      <label><input type="radio" name="q9" value="C"> Private tour.</label>
+      <label><input type="radio" name="q9" value="D"> Walk/cycle.</label>
+    </div>
+    <div class="question">
+      <p>10. Have you ever travelled with a travel group?</p>
+      <label><input type="radio" name="q10" value="A"> Nope.</label>
+      <label><input type="radio" name="q10" value="B"> Yeah.</label>
+      <label><input type="radio" name="q10" value="C"> Never, but I would love to.</label>
+      <label><input type="radio" name="q10" value="D"> Always, I have my travel buddies.</label>
+    </div>
+    <button type="button" onclick="submitQuiz()">SUBMIT</button>
+  </form>
+</div>
+
+<script>
+  function submitQuiz() {
+    const form = document.getElementById('quizForm');
+    const formData = new FormData(form);
+
+    // Handle form data or send it to the server
+    const quizResults = {};
+    formData.forEach((value, key) => {
+      quizResults[key] = value;
+    });
+
+    console.log('Quiz results:', quizResults);
+
+    // Redirect to the results page or display the results
+    window.location.href = "index.html";
+  }
+
+  document.getElementById('quizForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    submitQuiz();
+  });
+</script>
+</body>
+</html>
+
+      
+  

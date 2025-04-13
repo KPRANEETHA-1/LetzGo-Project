@@ -1,0 +1,64 @@
+body {
+  font-family: Arial, sans-serif;
+  background: url('fall.jpg') no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
+.wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 110vh;
+  background: rgba(56, 56, 56, 0.4);
+}
+
+.quiz-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background: linear-gradient(rgba(10, 10, 10, 0.6), transparent);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(111, 110, 110, 0.864);
+}
+
+h1 {
+  font-size: 32px;
+  background: -webkit-linear-gradient(#eee, #ff0505eb); /* Webkit prefix for Safari */
+  background: linear-gradient(#eee, #ff0505eb); /* Standard syntax for other browsers */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+  color: #f6eaea;
+}
+
+.question {
+  margin: 20px 0;
+}
+
+label {
+  display: block;
+  margin: 10px 0;
+  color: #f6eaea;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+ color:#eee;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-image: linear-gradient(60deg, #E21143, #FFB03A);
+}
+
+
+button:hover {
+  background-image: linear-gradient(60deg, #10d601, #3a3dff);
+
+}
